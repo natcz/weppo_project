@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0"/>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <title></title>
+  </head>
+  <body>
+    <div id="init">
+      <button id="start-game">New game</button>
+      <div>OR</div>
+      <button id="existing-game">Play existing game</button>
+      <input type="text" id="game-id" placeholder="Enter game id:">
+    </div>
+    <div id="game-screen">
+        <h1>Your game id is: <span id="game-id"></span></h1>
+          <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
