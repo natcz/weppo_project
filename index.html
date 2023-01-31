@@ -12,15 +12,27 @@
   </head>
   <body>
     <div id="init">
+      <input type="text" id="entry_nick" placeholder="Enter your nickname:">
       <button id="start-game">New game</button>
       <div>OR</div>
       <button id="existing-game">Play existing game</button>
       <input type="text" id="game-id" placeholder="Enter game id:">
     </div>
     <div id="game-screen">
-        <h1>Your game id is: <span id="game-id"></span></h1>
-          <canvas id="canvas"></canvas>
+        <h1>Your game id is: <span id="game-code-display"></span></h1>
+        <section class="container">
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+            <input type="text" class="tile"/>
+        </section>
     </div>
     <script type="module" src="./script.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
   </body>
 </html>
