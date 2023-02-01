@@ -11,14 +11,14 @@ io.on('connection', client => {
     function join_game(game_code) {
       client.join(game_code);
       client.number = 2;
-      client.emit('init', 2);
+      client.emit('init', 'player2');
     }
   
     function new_game(game_code) {
       client.join(game_code);
       client.number = 1;
-      client.emit('init', 1);
-    }--
+      client.emit('init', 'player1');
+    }
 
   });
   
