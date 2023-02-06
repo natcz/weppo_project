@@ -37,6 +37,7 @@ function start_game() {
   let name = get_player_nickname();
   if (name != '') {
     socket.emit('start game', name);
+    init();
   } else {
     alert("Please enter a nickname");
   }
@@ -46,6 +47,7 @@ function existing_game() {
   if (name != '') {
     const game_code = get_game_code();
     socket.emit('join game', name, game_code);
+    init();
   } else {
     alert("Please enter a nickname");
   }
