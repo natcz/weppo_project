@@ -1,18 +1,9 @@
 const start_game_btn = document.getElementById('start-game');
 const play_existing_btn = document.getElementById('existing-game');
 const tiles = Array.from(document.getElementsByClassName('tile'));
-const game_code_display = document.getElementById('game-code-display');
 const init_display = document.getElementById('init');
 const TILE_SIZE = tiles[0].style.minWidth;
 
-var game_state = {
-  board: ['_', '_', '_',
-    '_', '_', '_',
-    '_', '_', '_'],
-  player2: 'O',
-  player1: 'X',
-}
-var player;
 let current_game;
 
 start_game_btn.addEventListener('click', start_game);
@@ -36,8 +27,7 @@ socket.on('game full', (socket_id, code) => {
   }
 });
 
-function init(player_num) {
-  player = player_num;
+function init() {
   init_display.style.display = "none";
   game_screen.style.display = "inline-block";
   document.getElementById('board').style.display = "none";
